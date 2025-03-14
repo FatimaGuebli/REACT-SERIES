@@ -1,10 +1,16 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ length }) => {
   const today = new Date();
   return (
     <footer>
-      <p>Copyright &copy; {today.getFullYear()} </p>
+      <p>
+        {length === 0
+          ? "no items created yet"
+          : length === 1
+          ? `${length} item`
+          : `${length} items`}
+      </p>
     </footer>
   );
 };

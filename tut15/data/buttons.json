@@ -1,0 +1,38 @@
+{
+  "buttonList": [
+    {
+      "id": 0,
+      "name": "users",
+      "clicked": false,
+      "JSON_URL": "https://jsonplaceholder.typicode.com/users",
+      "structure": [
+        "id",
+        "name",
+        "username",
+        "email",
+        {
+          "adress": [
+            "street",
+            "suite",
+            "zip code",
+            { "geo": ["lat", "length"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "posts",
+      "clicked": false,
+      "JSON_URL": "https://jsonplaceholder.typicode.com/posts",
+      "structure": ["userId", "id", "title", "body"]
+    },
+    {
+      "id": 2,
+      "name": "comments",
+      "clicked": false,
+      "JSON_URL": "https://jsonplaceholder.typicode.com/comments",
+      "structure": ["postId", "id", "name", "email", "body"]
+    }
+  ]
+}

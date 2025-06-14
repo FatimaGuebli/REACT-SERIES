@@ -1,14 +1,13 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import DataContext from "./context/DataContext";
 
-function Nav() {
+const Nav = () => {
   const { search, setSearch } = useContext(DataContext);
   return (
     <nav className="Nav">
       <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="search">Search POsts</label>
+        <label htmlFor="search">Search Posts</label>
         <input
           id="search"
           type="text"
@@ -22,14 +21,14 @@ function Nav() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/post">post</Link>
+          <Link to="/post">Post</Link>
         </li>
         <li>
-          <Link to="/about">about</Link>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;
